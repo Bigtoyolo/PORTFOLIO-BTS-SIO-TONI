@@ -218,18 +218,6 @@ h3 {
   text-transform: uppercase;
 }
 
-.profile-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.8fr);
-  gap: 30px;
-  align-items: start;
-}
-
-.profile-text {
-  max-width: none;
-  text-align: left;
-}
-
 .profile-text-centered {
   max-width: 920px;
   margin: 0 auto;
@@ -240,69 +228,36 @@ h3 {
   margin-bottom: 22px;
 }
 
-.profile-text p:first-child {
-  margin-top: 0;
-}
-
-.profile-cards {
-  display: grid;
-  gap: 14px;
-}
-
-.profile-cards article {
-  padding: 22px;
-  border: 1px solid rgba(15, 118, 110, 0.22);
-  border-radius: 12px;
-  background: linear-gradient(135deg, #ffffff, #eef5f4);
-  box-shadow: var(--shadow);
-}
-
-.profile-cards span {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.profile-cards strong {
-  display: block;
-  color: var(--text);
-  font-size: 1.1rem;
-}
-
-.two-columns {
-  display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.9fr);
-  gap: 28px;
-  align-items: start;
-}
-
 .info-panel,
 .timeline article,
 .skills-grid article,
 .mission-card,
 .contact-panel,
-.contact-form {
+.contact-form,
+.summary-main,
+.summary-item,
+.tech-column {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
   box-shadow: var(--shadow);
 }
 
-.info-panel,
 .timeline article,
 .skills-grid article,
 .mission-card,
-.contact-panel {
+.contact-panel,
+.summary-main,
+.summary-item,
+.tech-column {
   padding: 24px;
 }
 
 .timeline,
 .skills-grid,
-.missions-grid {
+.missions-grid,
+.summary-list,
+.tech-stack {
   display: grid;
   gap: 18px;
 }
@@ -311,89 +266,30 @@ h3 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.skills-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
 .missions-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.timeline article h3 {
-  margin-bottom: 14px;
-}
-
-.skills-grid article h3 {
-  margin-bottom: 14px;
 }
 
 .profile-summary {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
   gap: 24px;
-  align-items: stretch;
 }
 
-.summary-main,
-.summary-item,
-.tech-column {
-  padding: 24px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--surface);
-  box-shadow: var(--shadow);
-}
-
-.summary-main,
-.summary-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.summary-main h3,
-.summary-item h3,
-.tech-column h3 {
-  margin-top: 0;
-  margin-bottom: 18px;
+.tech-stack {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .summary-main p,
 .summary-item p,
 .tech-column p {
-  color: var(--muted);
+  color: var(--text);
   line-height: 1.8;
-}
-
-.summary-list {
-  display: grid;
-  gap: 18px;
-  height: 100%;
-}
-
-.tech-stack {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-  align-items: stretch;
-}
-
-.tech-column {
-  min-height: 100%;
 }
 
 .tech-column p {
   margin: 0;
   line-height: 1.9;
-}
-
-.tech-column ul {
-  margin: 0;
-  padding-left: 18px;
-}
-
-.tech-column li {
-  margin-bottom: 10px;
 }
 
 .mission-card span {
@@ -430,61 +326,21 @@ h3 {
   text-decoration: none;
 }
 
-.clickable-card {
-  cursor: pointer;
-}
-
-.table-wrap {
-  overflow-x: auto;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--surface);
-  box-shadow: var(--shadow);
-}
-
-table {
-  width: 100%;
-  min-width: 820px;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  padding: 16px;
-  border-bottom: 1px solid var(--line);
-  text-align: left;
-  vertical-align: top;
-}
-
-th {
-  color: var(--text);
-  background: #f2f6f6;
-}
-
 .contact-layout {
   display: grid;
   grid-template-columns: minmax(360px, 0.9fr) minmax(360px, 1.1fr);
   gap: 28px;
-  align-items: stretch;
-}
-
-.contact-info,
-.contact-form {
-  min-height: 560px;
 }
 
 .contact-info {
   display: grid;
-  align-content: center;
   gap: 14px;
-  background: var(--surface);
 }
 
 .contact-item {
   display: flex;
   align-items: center;
   gap: 14px;
-  min-height: 58px;
   padding: 12px 14px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -505,10 +361,6 @@ th {
   text-decoration: none;
 }
 
-.contact-item a:hover {
-  color: var(--primary);
-}
-
 .contact-form {
   overflow: hidden;
   padding: 0;
@@ -522,13 +374,7 @@ th {
   border-bottom: 1px solid var(--line);
 }
 
-.form-header h3 {
-  margin: 0 0 6px;
-  color: var(--text);
-}
-
 .form-header p {
-  margin: 0;
   color: var(--muted);
 }
 
@@ -538,7 +384,6 @@ th {
   color: var(--muted);
   font-size: 0.82rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -551,30 +396,13 @@ th {
   border-radius: 8px;
   background: #f9fafb;
   color: var(--text);
-  font: inherit;
   padding: 14px 16px;
-}
-
-.contact-form textarea {
-  resize: vertical;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: var(--muted);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: 2px solid rgba(15, 118, 110, 0.35);
-  border-color: var(--primary);
 }
 
 .form-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
   padding: 26px 30px 30px;
 }
 
@@ -584,18 +412,8 @@ th {
   border-radius: 8px;
   background: var(--primary);
   color: #fff;
-  cursor: pointer;
-  font: inherit;
   font-weight: 800;
   padding: 12px 28px;
-}
-
-.form-footer button:hover {
-  background: var(--primary-dark);
-}
-
-.form-footer span {
-  color: var(--muted);
 }
 
 .footer {
@@ -605,16 +423,7 @@ th {
 }
 
 @media (max-width: 1100px) {
-  .profile-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .profile-cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .timeline,
-  .skills-grid,
   .profile-summary,
   .tech-stack {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -622,11 +431,6 @@ th {
 
   .contact-layout {
     grid-template-columns: 1fr;
-  }
-
-  .contact-info,
-  .contact-form {
-    min-height: auto;
   }
 }
 
@@ -642,7 +446,6 @@ th {
     right: 16px;
     display: none;
     flex-direction: column;
-    align-items: stretch;
     padding: 16px;
     border: 1px solid var(--line);
     border-radius: 8px;
@@ -654,11 +457,8 @@ th {
     display: flex;
   }
 
-  .two-columns,
   .timeline,
-  .skills-grid,
   .missions-grid,
-  .profile-cards,
   .profile-summary,
   .tech-stack {
     grid-template-columns: 1fr;
@@ -680,7 +480,6 @@ th {
   }
 
   .form-footer {
-    align-items: stretch;
     flex-direction: column;
   }
 
