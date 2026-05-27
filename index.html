@@ -677,7 +677,11 @@
 
       </div>
 
-      <form class="contact-form">
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/xpqnkrnl"
+        method="POST"
+      >
 
         <div class="form-header">
           <h3>Envoyer un message</h3>
@@ -691,6 +695,7 @@
           name="name"
           type="text"
           placeholder="Votre nom"
+          required
         />
 
         <label for="email">Email</label>
@@ -700,6 +705,7 @@
           name="email"
           type="email"
           placeholder="votre@email.com"
+          required
         />
 
         <label for="subject">Sujet</label>
@@ -709,6 +715,7 @@
           name="subject"
           type="text"
           placeholder="Stage, alternance, autre..."
+          required
         />
 
         <label for="message">Message</label>
@@ -718,6 +725,7 @@
           name="message"
           rows="6"
           placeholder="Votre message..."
+          required
         ></textarea>
 
         <div class="form-footer">
