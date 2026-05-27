@@ -230,6 +230,16 @@ h3 {
   text-align: left;
 }
 
+.profile-text-centered {
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-text-centered p {
+  margin-bottom: 22px;
+}
+
 .profile-text p:first-child {
   margin-top: 0;
 }
@@ -334,22 +344,47 @@ h3 {
   box-shadow: var(--shadow);
 }
 
+.summary-main,
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .summary-main h3,
 .summary-item h3,
 .tech-column h3 {
   margin-top: 0;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
+}
+
+.summary-main p,
+.summary-item p,
+.tech-column p {
+  color: var(--muted);
+  line-height: 1.8;
 }
 
 .summary-list {
   display: grid;
   gap: 18px;
+  height: 100%;
 }
 
 .tech-stack {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
+  align-items: stretch;
+}
+
+.tech-column {
+  min-height: 100%;
+}
+
+.tech-column p {
+  margin: 0;
+  line-height: 1.9;
 }
 
 .tech-column ul {
@@ -371,14 +406,20 @@ h3 {
   font-weight: 800;
 }
 
-.animated-card {
+.animated-card,
+.tech-column,
+.summary-item,
+.summary-main {
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
     border-color 0.25s ease;
 }
 
-.animated-card:hover {
+.animated-card:hover,
+.tech-column:hover,
+.summary-item:hover,
+.summary-main:hover {
   transform: translateY(-8px);
   border-color: var(--primary);
   box-shadow: 0 24px 60px rgba(23, 32, 51, 0.15);
@@ -621,6 +662,10 @@ th {
   .profile-summary,
   .tech-stack {
     grid-template-columns: 1fr;
+  }
+
+  .profile-text-centered {
+    text-align: left;
   }
 }
 
