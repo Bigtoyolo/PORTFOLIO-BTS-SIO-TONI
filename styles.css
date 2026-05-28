@@ -270,21 +270,8 @@ h3 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.profile-summary {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
-  gap: 24px;
-}
-
 .tech-stack {
   grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.summary-main p,
-.summary-item p,
-.tech-column p {
-  color: var(--text);
-  line-height: 1.8;
 }
 
 .tech-column {
@@ -369,6 +356,16 @@ h3 {
   line-height: 1.75;
 }
 
+.mission-content ul {
+  margin-bottom: 20px;
+  padding-left: 22px;
+}
+
+.mission-content li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+
 .mission-images {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 420px));
@@ -386,6 +383,10 @@ h3 {
   border-radius: 10px;
   background: var(--surface);
   box-shadow: var(--shadow);
+}
+
+.mission-image-large {
+  max-width: 620px;
 }
 
 .image-blur-sensitive {
@@ -494,7 +495,6 @@ h3 {
 
 @media (max-width: 1100px) {
   .timeline,
-  .profile-summary,
   .tech-stack {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -529,7 +529,6 @@ h3 {
 
   .timeline,
   .missions-grid,
-  .profile-summary,
   .tech-stack {
     grid-template-columns: 1fr;
   }
@@ -543,6 +542,10 @@ h3 {
   }
 
   .mission-image {
+    max-width: 100%;
+  }
+
+  .mission-image-large {
     max-width: 100%;
   }
 }

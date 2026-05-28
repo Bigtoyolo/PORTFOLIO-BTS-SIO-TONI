@@ -1,344 +1,148 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mission 2 - Enrôlement BYOD Android</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body>
-
-<header class="site-header">
-  <nav class="nav">
-    <a class="brand" href="index.html">Toni Ljubisavljevic</a>
-    <div class="nav-links">
-      <a href="index.html#missions">Retour aux missions</a>
-    </div>
-  </nav>
-</header>
-
-<main>
-
-<section class="section">
-  <div class="section-heading centered">
-    <p class="kicker">Mission 2</p>
-    <h2>Enrôlement d’un appareil Android BYOD avec profil professionnel</h2>
-  </div>
-
-  <div class="mission-content">
-
-    <h3>1. Présentation générale</h3>
-
-    <p>
-      Cette mission porte sur l’enrôlement d’un appareil Android personnel dans un environnement professionnel
-      à l’aide de Microsoft Intune et de l’application Company Portal.
-    </p>
-
-    <p>
-      L’objectif est de permettre à un utilisateur d’accéder aux ressources de l’entreprise depuis son téléphone
-      personnel, tout en séparant clairement les données personnelles et les données professionnelles.
-    </p>
-
-    <p>
-      Cette configuration repose sur la création d’un profil professionnel Android, également appelé
-      Android Work Profile. Ce profil permet d’isoler les applications, les comptes, les paramètres et les données
-      liés à l’entreprise.
-    </p>
-
-    <h3>2. Contexte de la mission</h3>
-
-    <p>
-      Dans le cadre du support informatique, certains utilisateurs souhaitent utiliser leur téléphone Android personnel
-      pour accéder à leurs emails professionnels, aux applications métiers, au Wi-Fi d’entreprise et aux ressources internes.
-    </p>
-
-    <p>
-      Pour répondre à ce besoin, l’appareil doit être inscrit dans Microsoft Intune via l’application Intune Company Portal.
-      Cette procédure permet de gérer uniquement la partie professionnelle du téléphone, sans accéder aux données personnelles
-      de l’utilisateur.
-    </p>
-
-    <p>
-      Cette mission consiste donc à accompagner l’utilisateur dans l’enrôlement de son appareil Android personnel
-      en mode BYOD, afin de garantir un accès sécurisé aux services de l’entreprise.
-    </p>
-
-    <h3>3. Objectifs de la procédure</h3>
-
-    <p>
-      L’enrôlement d’un appareil Android BYOD permet de :
-    </p>
-
-    <ul>
-      <li>créer un profil professionnel sur le téléphone Android</li>
-      <li>activer ce profil professionnel</li>
-      <li>configurer les paramètres nécessaires à l’accès aux ressources de l’entreprise</li>
-      <li>installer les applications professionnelles autorisées</li>
-      <li>sécuriser l’accès aux emails, aux applications et aux données professionnelles</li>
-      <li>séparer les données personnelles des données professionnelles</li>
-    </ul>
-
-    <h3>4. Prérequis avant l’enrôlement</h3>
-
-    <h4>4.1. Vérification du compte utilisateur</h4>
-
-    <p>
-      Avant de commencer la procédure, il est nécessaire de vérifier que l’utilisateur dispose bien d’un compte professionnel
-      actif et autorisé à utiliser l’enrôlement BYOD Android.
-    </p>
-
-    <p>
-      L’utilisateur doit être ajouté au groupe suivant :
-    </p>
-
-    <p>
-      int_ip_prd_byod_phone_restrictions
-    </p>
-
-    <p>
-      Ce groupe permet d’appliquer les restrictions et les règles nécessaires à l’enrôlement d’un téléphone personnel
-      dans l’environnement de l’entreprise.
-    </p>
+<h3>3. Objectifs de la procédure</h3>
 
-    <div class="mission-images">
-      <img src="assets/image-20250423-115445.png" alt="Groupe de restriction BYOD Android" class="mission-image" />
-    </div>
+<p>
+  L’enrôlement d’un appareil Android BYOD permet de créer un profil professionnel sur le téléphone Android,
+  d'activer ce profil professionnel, configurer les paramètres nécessaires à l’accès aux ressources de l’entreprise,
+  d'installer les applications professionnelles autorisées, sécuriser l’accès aux emails, aux applications et aux
+  données professionnelles et de séparer les données personnelles des données professionnelles.
+</p>
 
-    <h4>4.2. Installation de l’application Company Portal</h4>
+<h3>4. Prérequis avant l’enrôlement</h3>
 
-    <p>
-      L’utilisateur doit installer l’application Intune Company Portal depuis Google Play.
-      Cette application est utilisée pour inscrire l’appareil, gérer l’accès aux ressources professionnelles,
-      installer les applications de travail et obtenir de l’assistance informatique.
-    </p>
+<h4>4.1. Vérification du compte utilisateur</h4>
 
-    <p>
-      L’application Company Portal est indispensable pour démarrer la procédure d’enrôlement.
-    </p>
+<p>
+  Avant de commencer la procédure, il est nécessaire de vérifier que l’utilisateur dispose bien d’un compte professionnel actif et autorisé à utiliser l’enrôlement BYOD Android.
+</p>
 
-    <div class="mission-images">
-      <img src="assets/Capture d'écran 2026-05-28 144601.png" alt="Installation de l’application Company Portal" class="mission-image" />
-    </div>
+<p>
+  L’utilisateur doit être ajouté au groupe "int_ip_prd_byod_phone_restrictions"
+</p>
 
-    <h3>5. Lancement de l’enrôlement</h3>
+<p>
+  Ce groupe permet d’appliquer les restrictions et les règles nécessaires à l’enrôlement d’un téléphone personnel dans l’environnement de l’entreprise.
+</p>
 
-    <h4>Étape 1 – Vérification du compte principal Android</h4>
+<div class="mission-images">
+  <img src="assets/image-20250423-115445.png" alt="Groupe de restriction BYOD Android" class="mission-image mission-image-large" />
+</div>
 
-    <p>
-      Avant de lancer l’inscription, il faut s’assurer que l’utilisateur est bien connecté au compte principal de son appareil.
-      L’enrôlement du profil professionnel n’est pas pris en charge sur les comptes secondaires Android.
-    </p>
+<h4>4.2. Installation de l’application Company Portal</h4>
 
-    <h4>Étape 2 – Ouverture de Company Portal</h4>
+<p>
+  L’utilisateur doit installer l’application Intune Company Portal depuis Google Play. Cette application est utilisée pour inscrire l’appareil, gérer l’accès aux ressources professionnelles, installer les applications de travail et obtenir de l’assistance informatique. L’application Company Portal est indispensable pour démarrer la procédure d’enrôlement.
+</p>
 
-    <p>
-      Ouvrir l’application Intune Company Portal sur le téléphone Android.
-    </p>
+<div class="mission-images">
+  <img src="assets/Capture d'écran 2026-05-28 144601.png" alt="Installation de l’application Company Portal" class="mission-image" />
+</div>
 
-    <p>
-      L’utilisateur doit ensuite se connecter avec son compte professionnel ou scolaire.
-    </p>
+<h3>5. Lancement de l’enrôlement</h3>
 
-    <h4>Étape 3 – Démarrage de la configuration</h4>
+<h4>Étape 1 – Vérification du compte principal Android</h4>
 
-    <p>
-      Sur l’écran Company Access Setup, l’application affiche les différentes tâches nécessaires
-      pour inscrire l’appareil.
-    </p>
+<p>
+  Avant de lancer l’inscription, il faut s’assurer que l’utilisateur est bien connecté au compte principal de son appareil. L’enrôlement du profil professionnel n’est pas pris en charge sur les comptes secondaires Android.
+</p>
 
-    <p>
-      L’utilisateur doit lire les informations affichées, puis appuyer sur BEGIN afin de commencer
-      la procédure d’enrôlement.
-    </p>
+<h4>Étape 2 – Ouverture de Company Portal</h4>
 
-    <h3>6. Informations de confidentialité</h3>
+<p>
+  Ouvrir l’application Intune Company Portal sur le téléphone Android. L’utilisateur doit ensuite se connecter avec son compte professionnel ou scolaire.
+</p>
 
-    <p>
-      L’application affiche ensuite un écran d’informations de confidentialité.
-      Cette étape permet d’expliquer à l’utilisateur ce que l’entreprise peut voir et ce qu’elle ne peut pas voir
-      sur son appareil personnel.
-    </p>
+<h4>Étape 3 – Démarrage de la configuration</h4>
 
-    <p>
-      Le principe du profil professionnel est de séparer les données de l’entreprise des données personnelles.
-      L’entreprise peut gérer les applications et les données professionnelles, mais ne doit pas accéder au contenu personnel
-      de l’utilisateur.
-    </p>
+<p>
+  Sur l’écran Company Access Setup, l’application affiche les différentes tâches nécessaires pour inscrire l’appareil. L’utilisateur doit lire les informations affichées, puis appuyer sur BEGIN afin de commencer la procédure d’enrôlement.
+</p>
 
-    <p>
-      Après lecture des informations, l’utilisateur doit appuyer sur CONTINUE.
-    </p>
+<h3>6. Informations de confidentialité</h3>
 
-    <h3>7. Création du profil professionnel Android</h3>
+<p>
+  L’application affiche ensuite un écran d’informations de confidentialité. Cette étape permet d’expliquer à l’utilisateur ce que l’entreprise peut voir et ce qu’elle ne peut pas voir sur son appareil personnel.
+</p>
 
-    <h4>Étape 1 – Acceptation des conditions Google</h4>
+<p>
+  Le principe du profil professionnel est de séparer les données de l’entreprise des données personnelles. L’entreprise peut gérer les applications et les données professionnelles, mais ne doit pas accéder au contenu personnel de l’utilisateur.
+</p>
 
-    <p>
-      L’utilisateur doit lire et accepter les conditions Google relatives à la création d’un profil professionnel Android.
-      L’apparence de cet écran peut varier selon la version du système Android utilisée.
-    </p>
+<p>
+  Après lecture des informations, l’utilisateur doit appuyer sur CONTINUE.
+</p>
 
-    <p>
-      Pour continuer, l’utilisateur doit sélectionner Accept & continue.
-    </p>
+<h3>7. Création du profil professionnel Android</h3>
 
-    <h4>Étape 2 – Politique de confidentialité Samsung Knox</h4>
+<h4>Étape 1 – Acceptation des conditions Google</h4>
 
-    <p>
-      Si l’appareil utilisé est un Samsung, une étape supplémentaire peut apparaître concernant la politique de confidentialité
-      Samsung Knox.
-    </p>
+<p>
+  L’utilisateur doit lire et accepter les conditions Google relatives à la création d’un profil professionnel Android. L’apparence de cet écran peut varier selon la version du système Android utilisée. Pour continuer, l’utilisateur doit sélectionner Accept & continue.
+</p>
 
-    <p>
-      Dans ce cas, l’utilisateur doit sélectionner Agree afin de poursuivre la configuration.
-    </p>
+<h4>Étape 2 – Politique de confidentialité Samsung Knox</h4>
 
-    <div class="mission-images">
-      <img src="assets/Capture d'écran 2026-05-28 144607.png" alt="Politique de confidentialité Samsung Knox" class="mission-image" />
-    </div>
+<p>
+  Si l’appareil utilisé est un Samsung, une étape supplémentaire peut apparaître concernant la politique de confidentialité Samsung Knox. Dans ce cas, l’utilisateur doit sélectionner Agree afin de poursuivre la configuration.
+</p>
 
-    <h4>Étape 3 – Création du profil de travail</h4>
+<div class="mission-images">
+  <img src="assets/Capture d'écran 2026-05-28 144607.png" alt="Politique de confidentialité Samsung Knox" class="mission-image" />
+</div>
 
-    <p>
-      L’appareil configure ensuite le profil professionnel. Cette étape peut prendre quelques minutes.
-      Il est important de ne pas fermer l’application pendant la configuration.
-    </p>
+<h4>Étape 3 – Création du profil de travail</h4>
 
-    <p>
-      Une fois le profil créé, l’utilisateur doit sélectionner Next.
-    </p>
+<p>
+  L’appareil configure ensuite le profil professionnel. Cette étape peut prendre quelques minutes. Il est important de ne pas fermer l’application pendant la configuration. Une fois le profil créé, l’utilisateur doit sélectionner Next.
+</p>
 
-    <div class="mission-images">
-      <img src="assets/Capture d'écran 2026-05-28 144613.png" alt="Création du profil professionnel Android" class="mission-image" />
-    </div>
+<div class="mission-images">
+  <img src="assets/Capture d'écran 2026-05-28 144613.png" alt="Création du profil professionnel Android" class="mission-image" />
+</div>
 
-    <h3>8. Confirmation de la création du profil</h3>
+<h3>8. Confirmation de la création du profil</h3>
 
-    <p>
-      Une fois le profil professionnel créé, l’écran de configuration Company Portal confirme que cette étape est terminée.
-    </p>
+<p>
+  Une fois le profil professionnel créé, l’écran de configuration Company Portal confirme que cette étape est terminée. L’utilisateur doit appuyer sur CONTINUE afin de passer à la tâche suivante de l’enrôlement.
+</p>
 
-    <p>
-      L’utilisateur doit appuyer sur CONTINUE afin de passer à la tâche suivante de l’enrôlement.
-    </p>
+<div class="mission-images">
+  <img src="assets/Capture d'écran 2026-05-28 144619.png" alt="Confirmation de création du profil professionnel" class="mission-image" />
+</div>
 
-    <div class="mission-images">
-      <img src="assets/Capture d'écran 2026-05-28 144619.png" alt="Confirmation de création du profil professionnel" class="mission-image" />
-    </div>
+<h3>9. Vérification des paramètres de l’appareil</h3>
 
-    <h3>9. Vérification des paramètres de l’appareil</h3>
+<p>
+  L’application Company Portal vérifie ensuite les paramètres requis par l’entreprise. Si certains paramètres ne sont pas conformes, l’application propose de les corriger. Si une correction est nécessaire, l’utilisateur doit appuyer sur RESOLVE. L’application ouvre alors le paramètre concerné directement sur l’appareil. Une fois les paramètres corrigés, l’utilisateur doit revenir dans Company Portal et appuyer sur CONFIRM DEVICE SETTINGS.
+</p>
 
-    <p>
-      L’application Company Portal vérifie ensuite les paramètres requis par l’entreprise.
-      Si certains paramètres ne sont pas conformes, l’application propose de les corriger.
-    </p>
+<div class="mission-images">
+  <img src="assets/Capture d'écran 2026-05-28 144626.png" alt="Vérification des paramètres requis" class="mission-image" />
+  <img src="assets/Capture d'écran 2026-05-28 144634.png" alt="Confirmation des paramètres de l’appareil" class="mission-image" />
+</div>
 
-    <p>
-      Si une correction est nécessaire, l’utilisateur doit appuyer sur RESOLVE.
-      L’application ouvre alors le paramètre concerné directement sur l’appareil.
-    </p>
+<h3>10. Fin de l’enrôlement</h3>
 
-    <p>
-      Une fois les paramètres corrigés, l’utilisateur doit revenir dans Company Portal et appuyer sur
-      CONFIRM DEVICE SETTINGS.
-    </p>
+<p>
+  Lorsque la configuration est terminée, l’utilisateur est renvoyé vers la liste des tâches d’installation. Chaque tâche doit afficher une coche verte, ce qui confirme que l’enrôlement a été correctement réalisé. L’utilisateur peut ensuite appuyer sur DONE. À ce stade, l’appareil Android personnel dispose d’un profil professionnel fonctionnel et peut accéder aux ressources autorisées par l’entreprise.
+</p>
 
-    <div class="mission-images">
-      <img src="assets/Capture d'écran 2026-05-28 144626.png" alt="Vérification des paramètres requis" class="mission-image" />
-      <img src="assets/Capture d'écran 2026-05-28 144634.png" alt="Confirmation des paramètres de l’appareil" class="mission-image" />
-    </div>
+<div class="mission-images">
+  <img src="assets/Capture d'écran 2026-05-28 144641.png" alt="Configuration terminée dans Company Portal" class="mission-image" />
+</div>
 
-    <h3>10. Fin de l’enrôlement</h3>
+<h3>11. Installation des applications professionnelles</h3>
 
-    <p>
-      Lorsque la configuration est terminée, l’utilisateur est renvoyé vers la liste des tâches d’installation.
-      Chaque tâche doit afficher une coche verte, ce qui confirme que l’enrôlement a été correctement réalisé.
-    </p>
+<p>
+  Après l’enrôlement, l’utilisateur peut être invité à ouvrir le Google Play Store professionnel afin d’installer les applications recommandées. S’il n’est pas prêt à installer les applications immédiatement, il peut le faire plus tard depuis le Play Store présent dans le profil professionnel. Les applications disponibles peuvent également être consultées depuis le menu de Company Portal, dans la section Get Apps.
+</p>
 
-    <p>
-      L’utilisateur peut ensuite appuyer sur DONE.
-    </p>
+<div class="mission-images">
+  <img src="assets/Capture d'écran 2026-05-28 144649.png" alt="Ouverture des applications professionnelles recommandées" class="mission-image" />
+  <img src="assets/Capture d'écran 2026-05-28 144656.png" alt="Accès aux applications disponibles depuis Company Portal" class="mission-image" />
+</div>
 
-    <p>
-      À ce stade, l’appareil Android personnel dispose d’un profil professionnel fonctionnel et peut accéder aux ressources
-      autorisées par l’entreprise.
-    </p>
+<h3>12. Disponibilité d’Android Enterprise</h3>
 
-    <div class="mission-images">
-      <img src="assets/Capture d'écran 2026-05-28 144641.png" alt="Configuration terminée dans Company Portal" class="mission-image" />
-    </div>
-
-    <h3>11. Installation des applications professionnelles</h3>
-
-    <p>
-      Après l’enrôlement, l’utilisateur peut être invité à ouvrir le Google Play Store professionnel afin d’installer
-      les applications recommandées.
-    </p>
-
-    <p>
-      S’il n’est pas prêt à installer les applications immédiatement, il peut le faire plus tard depuis le Play Store
-      présent dans le profil professionnel.
-    </p>
-
-    <p>
-      Les applications disponibles peuvent également être consultées depuis le menu de Company Portal, dans la section
-      Get Apps.
-    </p>
-
-    <div class="mission-images">
-      <img src="assets/Capture d'écran 2026-05-28 144649.png" alt="Ouverture des applications professionnelles recommandées" class="mission-image" />
-      <img src="assets/Capture d'écran 2026-05-28 144656.png" alt="Accès aux applications disponibles depuis Company Portal" class="mission-image" />
-    </div>
-
-    <h3>12. Disponibilité d’Android Enterprise</h3>
-
-    <p>
-      Les profils professionnels Android sont disponibles uniquement dans les pays et régions où Android Enterprise
-      est pris en charge.
-    </p>
-
-    <p>
-      Si Android Enterprise n’est pas disponible dans le pays ou la région de l’utilisateur, Company Portal ne pourra pas
-      configurer le profil professionnel sur l’appareil.
-    </p>
-
-    <p>
-      Dans ce cas, l’utilisateur doit contacter le support informatique afin d’identifier une autre méthode d’accès
-      aux ressources professionnelles.
-    </p>
-
-    <h3>13. Mise à jour des services Google Play</h3>
-
-    <p>
-      Si la version des services Google Play est obsolète, l’enrôlement peut échouer ou être bloqué.
-      Il est donc recommandé de vérifier que les services Google Play sont bien à jour avant de commencer la procédure.
-    </p>
-
-    <p>
-      L’utilisateur peut ouvrir Google Play sur son appareil afin de rechercher les mises à jour disponibles.
-    </p>
-
-    <h3>14. Résultat attendu</h3>
-
-    <p>
-      À la fin de cette procédure, l’appareil Android personnel est correctement inscrit dans Microsoft Intune.
-      Le profil professionnel est actif et l’utilisateur peut accéder aux ressources de l’entreprise de manière sécurisée.
-    </p>
-
-    <p>
-      Les données personnelles restent séparées des données professionnelles, ce qui permet de respecter le principe
-      du BYOD tout en maintenant un niveau de sécurité adapté à l’environnement professionnel.
-    </p>
-
-    <p>
-      <a class="button primary" href="index.html#missions">Retour aux missions</a>
-    </p>
-
-  </div>
-</section>
-
-</main>
-
-</body>
-</html>
+<p>
+  Les profils professionnels Android sont disponibles uniquement dans les pays et régions où Android Enterprise est pris en charge. Si Android Enterprise n’est pas disponible dans le pays ou la région de l’utilisateur, Company Portal ne pourra pas configurer le profil professionnel sur l’appareil. Dans ce cas, l’utilisateur doit contacter le support informatique afin d’identifier une autre méthode d’accès aux ressources professionnelles.
+</p>
