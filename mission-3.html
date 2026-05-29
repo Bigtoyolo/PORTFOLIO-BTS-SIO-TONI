@@ -5,6 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mission 3 - Réinitialisation d’un appareil Intune</title>
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .mission-images-entra {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(340px, 1fr));
+      gap: 22px;
+      align-items: start;
+      justify-items: center;
+      margin: 28px 0;
+    }
+
+    .mission-images-entra .mission-image {
+      width: 100%;
+      max-width: 540px;
+    }
+
+    .mission-images-entra .mission-image-centered {
+      grid-column: 1 / -1;
+      margin-top: -10px;
+      max-width: 540px;
+    }
+
+    @media (max-width: 900px) {
+      .mission-images-entra {
+        grid-template-columns: 1fr;
+      }
+
+      .mission-images-entra .mission-image-centered {
+        grid-column: auto;
+        margin-top: 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -229,10 +262,10 @@
       l’écran et affiche le mot de passe ainsi que le nom du compte administrateur local.
     </p>
 
-    <div class="mission-images">
+    <div class="mission-images mission-images-entra">
       <img src="assets/Capture d'écran 2025-11-17 140020.png" alt="Recherche de l’appareil dans Microsoft Entra" class="mission-image" />
       <img src="assets/Capture d'écran 2025-11-17 140917.png" alt="Accès à la récupération du mot de passe administrateur local" class="mission-image" />
-      <img src="assets/Capture d'écran 2025-11-17 141231.png" alt="Affichage du mot de passe administrateur local" class="mission-image" />
+      <img src="assets/Capture d'écran 2025-11-17 141231.png" alt="Affichage du mot de passe administrateur local" class="mission-image mission-image-centered" />
     </div>
 
     <h4>Étape 4 – Connexion avec le compte administrateur local</h4>
