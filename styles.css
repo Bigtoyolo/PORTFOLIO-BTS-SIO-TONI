@@ -232,7 +232,24 @@ h3 {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
   gap: 32px;
-  align-items: start;
+  align-items: center;
+}
+
+.veille-text-centered {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.veille-text-centered h3 {
+  margin-top: 0;
+  color: var(--primary-dark);
+}
+
+.veille-text-centered p {
+  margin-right: auto;
+  margin-left: auto;
+  color: var(--text);
 }
 
 .info-panel,
