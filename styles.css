@@ -1,6 +1,3 @@
-Voici ton CSS complet :
-
-```css
 :root {
   --bg: #f7f8fb;
   --surface: #ffffff;
@@ -396,7 +393,7 @@ h3 {
 .mission-image[src*="Capture d'écran 2026-05-29 113041.png"],
 .mission-image[src*="Capture d'écran 2025-11-17 140917.png"],
 .mission-image[src*="Capture d'écran 2025-11-17 141231.png"] {
-  max-width: 620px;
+  max-width: 360px;
 }
 
 .image-blur-sensitive {
@@ -578,4 +575,3 @@ h3 {
     width: 100%;
   }
 }
-```
