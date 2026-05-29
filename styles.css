@@ -1,3 +1,6 @@
+Voici ton CSS complet :
+
+```css
 :root {
   --bg: #f7f8fb;
   --surface: #ffffff;
@@ -332,7 +335,7 @@ h3 {
 }
 
 .mission-content {
-  max-width: 1000px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
@@ -368,15 +371,15 @@ h3 {
 
 .mission-images {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 820px));
+  grid-template-columns: repeat(auto-fit, minmax(460px, 980px));
   justify-content: center;
-  gap: 28px;
-  margin: 38px 0;
+  gap: 32px;
+  margin: 42px 0;
 }
 
 .mission-image {
   width: 100%;
-  max-width: 820px;
+  max-width: 980px;
   height: auto;
   display: block;
   border: 1px solid var(--line);
@@ -386,7 +389,14 @@ h3 {
 }
 
 .mission-image-large {
-  max-width: 1180px;
+  max-width: 1320px;
+}
+
+.mission-image[src*="Capture d'écran 2026-05-29 113141.png"],
+.mission-image[src*="Capture d'écran 2026-05-29 113041.png"],
+.mission-image[src*="Capture d'écran 2025-11-17 140917.png"],
+.mission-image[src*="Capture d'écran 2025-11-17 141231.png"] {
+  max-width: 620px;
 }
 
 .image-blur-sensitive {
@@ -568,3 +578,4 @@ h3 {
     width: 100%;
   }
 }
+```
