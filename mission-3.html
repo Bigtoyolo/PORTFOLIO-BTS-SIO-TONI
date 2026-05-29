@@ -18,13 +18,13 @@
 
     .mission-images-entra .mission-image {
       width: 100%;
-      max-width: 540px;
+      max-width: 560px;
     }
 
-    .mission-images-entra .mission-image-centered {
-      grid-column: 1 / -1;
-      margin-top: -10px;
-      max-width: 540px;
+    .mission-images-entra .mission-image-bottom-left {
+      grid-column: 1 / 2;
+      max-width: 560px;
+      margin-top: 0;
     }
 
     @media (max-width: 900px) {
@@ -32,9 +32,8 @@
         grid-template-columns: 1fr;
       }
 
-      .mission-images-entra .mission-image-centered {
+      .mission-images-entra .mission-image-bottom-left {
         grid-column: auto;
-        margin-top: 0;
       }
     }
   </style>
@@ -265,7 +264,7 @@
     <div class="mission-images mission-images-entra">
       <img src="assets/Capture d'écran 2025-11-17 140020.png" alt="Recherche de l’appareil dans Microsoft Entra" class="mission-image" />
       <img src="assets/Capture d'écran 2025-11-17 140917.png" alt="Accès à la récupération du mot de passe administrateur local" class="mission-image" />
-      <img src="assets/Capture d'écran 2025-11-17 141231.png" alt="Affichage du mot de passe administrateur local" class="mission-image mission-image-centered" />
+      <img src="assets/Capture d'écran 2025-11-17 141231.png" alt="Affichage du mot de passe administrateur local" class="mission-image mission-image-bottom-left" />
     </div>
 
     <h4>Étape 4 – Connexion avec le compte administrateur local</h4>
