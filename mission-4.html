@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mission 4 - Création d’un projet Jira</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">Toni Ljubisavljevic</a>
+
+    <div class="nav-links">
+      <a href="index.html#missions">Retour aux missions</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<section class="section">
+
+  <div class="section-heading centered">
+    <p class="kicker">Mission 4</p>
+    <h2>Création d’un projet Jira à partir d’une demande ServiceNow</h2>
+  </div>
+
+  <div class="mission-content">
+
+    <h3>1. Accéder à la création du projet</h3>
+
+    <p>
+      Depuis Jira, cliquez sur le menu Projects situé dans la barre supérieure, puis sélectionnez Create project.
+      Cette action ouvre l’assistant de création qui permettra de configurer un nouveau projet selon les besoins
+      définis dans la demande ServiceNow.
+    </p>
+
+    <p>
+      La création d’un projet doit toujours être réalisée à partir d’une demande officielle. Les demandes reçues
+      par email ou via Teams ne doivent pas être traitées directement.
+    </p>
+
+    <div class="mission-images">
+      <img src="assets/Capture d'écran 2026-05-29 113733.png" alt="Accès au menu Projects dans Jira" class="mission-image mission-image-large" />
+      <img src="assets/Capture d'écran 2026-05-29 113745.png" alt="Création d’un projet Jira" class="mission-image mission-image-large" />
+    </div>
+
+    <h3>2. Sélectionner le modèle et le type de projet</h3>
+
+    <p>
+      Dans la liste des modèles disponibles, sélectionnez Software Development, puis choisissez le modèle Kanban.
+      Ce modèle est celui qui doit être utilisé par défaut, sauf indication contraire dans la demande.
+    </p>
+
+    <p>
+      Après avoir cliqué sur Use Template, Jira demande de choisir le type de projet. Il est obligatoire de
+      sélectionner Company-managed Project afin de garantir une gestion centralisée des permissions, des workflows
+      et des configurations.
+    </p>
+
+    <p>
+      Le type Team-managed Project ne doit jamais être utilisé.
+    </p>
+
+    <div class="mission-images">
+      <img src="assets/Capture d'écran 2026-05-29 113751.png" alt="Sélection du modèle Software Development dans Jira" class="mission-image mission-image-large" />
+      <img src="assets/Capture d'écran 2026-05-29 113757.png" alt="Sélection du modèle Kanban dans Jira" class="mission-image mission-image-large" />
+    </div>
+
+    <h3>3. Renseigner les informations du projet</h3>
+
+    <p>
+      Saisissez le nom du projet exactement comme indiqué dans la demande ServiceNow. Vérifiez attentivement
+      l’orthographe, les majuscules, les acronymes et la convention de nommage utilisée.
+    </p>
+
+    <p>
+      L’option Share settings with an existing project ne doit être cochée que si cela est explicitement demandé
+      dans le ticket. Dans tous les autres cas, laissez cette option désactivée.
+    </p>
+
+    <p>
+      Cette étape est essentielle, car elle définit l’identité du projet et sa configuration initiale.
+    </p>
+
+    <div class="mission-images">
+      <img src="assets/Capture d'écran 2026-05-29 113804.png" alt="Renseignement des informations du projet Jira" class="mission-image mission-image-large" />
+    </div>
+
+    <h3>4. Ajouter les membres de l’équipe</h3>
+
+    <p>
+      Ajoutez les utilisateurs mentionnés dans la demande ServiceNow. Avant l’ajout, vérifiez que chaque utilisateur
+      possède déjà un compte Jira.
+    </p>
+
+    <p>
+      Si un utilisateur n’existe pas dans Jira, contactez le demandeur afin qu’un ticket de création de compte soit
+      ouvert. Ne créez pas de compte utilisateur dans le cadre de la création du projet.
+    </p>
+
+    <p>
+      Si aucun membre n’est indiqué dans la demande, cliquez simplement sur Skip pour passer à l’étape suivante.
+    </p>
+
+    <div class="mission-images">
+      <img src="assets/Capture d'écran 2026-05-29 113810.png" alt="Ajout des membres de l’équipe dans le projet Jira" class="mission-image mission-image-large" />
+    </div>
+
+    <h3>5. Modifier le Project Lead</h3>
+
+    <p>
+      Une fois le projet créé, Jira attribue automatiquement le rôle de Project Lead à la personne ayant créé le projet.
+      Cette configuration doit être modifiée.
+    </p>
+
+    <p>
+      Accédez aux Project Settings puis remplacez le Project Lead par la personne responsable du projet. Dans la plupart
+      des cas, il s’agit soit du demandeur, soit de son manager.
+    </p>
+
+    <p>
+      Si cette information n’est pas précisée dans la demande, contactez le créateur du ticket afin d’obtenir une confirmation.
+      Le compte du support ou de l’administrateur ayant crééé le projet ne doit jamais rester défini comme Project Lead.
+    </p>
+
+    <div class="mission-images">
+      <img src="assets/Capture d'écran 2026-05-29 113815.png" alt="Accès aux paramètres du projet Jira" class="mission-image mission-image-large" />
+      <img src="assets/Capture d'écran 2026-05-29 113824.png" alt="Modification du Project Lead dans Jira" class="mission-image mission-image-large" />
+    </div>
+
+    <h3>6. Bonnes pratiques et points de vigilance</h3>
+
+    <p>
+      Toujours utiliser un projet Company-managed et le modèle Kanban, sauf demande spécifique. Vérifiez systématiquement
+      les informations présentes dans le ticket avant la création du projet et contactez le demandeur lorsque certaines
+      données sont manquantes.
+    </p>
+
+    <p>
+      Évitez les erreurs courantes telles que la création d’un projet à partir d’une demande informelle, la sélection
+      d’un projet Team-managed, le partage non autorisé des paramètres avec un autre projet ou encore le maintien de
+      votre propre compte comme Project Lead.
+    </p>
+
+    <p>
+      Le respect de ces règles garantit une administration cohérente et conforme aux standards de l’entreprise.
+    </p>
+
+    <p>
+      <a class="button primary" href="index.html#missions">Retour aux missions</a>
+    </p>
+
+  </div>
+
+</section>
+
+</main>
+
+</body>
+</html>
